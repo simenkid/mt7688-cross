@@ -3,7 +3,7 @@
 echo "*******************************************************************"
 echo "* MT7688 Linkit Smart cross-environment for building node modules *"
 echo "* Tested on:                                                      *"
-echo "*     Host: Ubuntu 14.04LTS x64                                   *"
+echo "*     Host: Ubuntu 14.04LTS x86_64 (MTK cross-tools)              *"
 echo "*     Target: MT7688 MIPS24KEc little endian, OpenWRT             *"
 echo "*                                                                 *"
 echo "* Author: Simen Li (simenkid@gmail.com)                           *"
@@ -28,6 +28,8 @@ npm_ver=`npm -v`
 # Check version of node and npm
 if [ ${node_ver} != 'v0.12.7' ]; then
     echo "Node version on host should be v0.12.7, yours is ${node_ver}."
+    echo "If you are using n, run: "
+    echo "$ sudo n 0.12.7"
     exit 0
 else
     echo "node version: ${node_ver}, ok!"
@@ -35,6 +37,8 @@ fi
 
 if [ ${npm_ver} != '2.11.3' ]; then
     echo "Npm version on host should be 2.11.3, yours is ${npm_ver}."
+    echo "To install the matched version, run: "
+    echo "$ sudo npm install -g npm@2.11.3"
     exit 0
 else
     echo "npm version: ${npm_ver}, ok!"
