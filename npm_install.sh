@@ -12,7 +12,7 @@ cd node_modules_mips/
 
 version=`npm view "$1" version`
 
-npm install --prefix ${BASEDIR} --target_arch=mips "$1"
+npm install --prefix ${BASEDIR} --target_arch=mipsel "$1"
 
 if [ $? -eq 1 ]
 then
