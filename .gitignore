@@ -28,5 +28,28 @@
 *.x86_64
 *.hex
 
+# Tarball and compressed
+*.7z
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# folders
+depot_tools/
+linkit/
+v8/
+node-v0.12.7-mips/
+mt7688sdk/
+node_modules/
+node_modules_mips/
+
+# other files
+.gclient
+.gclient_entries
+
 # Debug files
 *.dSYM/
