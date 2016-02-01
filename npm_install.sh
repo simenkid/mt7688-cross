@@ -11,6 +11,9 @@ fi
 cd node_modules_mips/
 
 version=`npm view "$1" version`
+module_name=${1%%@*}
+echo "> module name: ${module_name}"
+echo "> version: ${version}"
 
 npm install --prefix ${BASEDIR} --target_arch=mipsel "$1"
 
@@ -25,14 +28,16 @@ else
     echo "Archiving "$1"...."
     echo " "
  
-    if [ -f ${BASEDIR}/node_modules_mips/"$1"-"$version"_mips.tar.gz ]; then
-        rm ${BASEDIR}/node_modules_mips/"$1"-"$version"_mips.tar.gz
+    if [ -f ${BASEDIR}/node_modules_mips/"${module_name}"-"${version}"_mips.tar.gz ]; then
+        rm ${BASEDIR}/node_modules_mips/"${module_name}"-"${version}"_mips.tar.gz
     fi
 
     cd ${BASEDIR}/node_modules
-    tar -cvf "$1"-"$version"_mips.tar.gz "$1"/ > /dev/null
-    mv "$1"-"$version"_mips.tar.gz ${BASEDIR}/node_modules_mips
+    tar -cvf "${module_name}"-"${version}"_mips.tar.gz "${module_name}"/ > /dev/null
+
+    mv "${module_name}"-"${version}"_mips.tar.gz ${BASEDIR}/node_modules_mips
     rm -rf *
+
     echo " "
     echo "Building node module for MT7688(mipsel) finished!"
     echo " "
