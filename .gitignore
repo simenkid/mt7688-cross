@@ -46,6 +46,8 @@ node-v0.12.7-mips/
 mt7688sdk/
 node_modules/
 node_modules_mips/
+etc/
+_bad_scm/
 
 # other files
 .gclient

@@ -1,3 +1,4 @@
+# source the environment variables
 . $(pwd)/env.sh
 
 export npm_config_arch=mips
@@ -17,8 +18,7 @@ echo "> version: ${version}"
 
 npm install --prefix ${BASEDIR} --target_arch=mipsel "$1"
 
-if [ $? -eq 1 ]
-then
+if [ $? -eq 1 ]; then
     echo " "
     echo "Building node module for MT7688(mipsel) failed!"
     echo " "

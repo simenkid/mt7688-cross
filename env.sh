@@ -1,3 +1,4 @@
+# Setp up paths
 export PATH=`pwd`/depot_tools:"$PATH"
 export BASEDIR=$(pwd)
 export STAGING_DIR=${BASEDIR}/mt7688sdk/staging_dir
