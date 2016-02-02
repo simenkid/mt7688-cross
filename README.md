@@ -40,7 +40,7 @@ Shoot `create_env.sh` to start the building process. This may take around 20 min
 `~/mt7688-cross$ ./create_env.sh`  
 
 </br>
-As building accomplished,  in`linkit/opt/`, there is the cross-compiled node.js that can run on MT7688 MIPS platform. In addition, `v8/`, `node-v0.12.7-mips/`, and `mt7688sdk` are the sources of v8, node, and mt7688 SDK, respectively.  
+As building accomplished,  in`linkit/opt/`, there is the cross-compiled node.js that can run on MT7688 MIPS platform. In addition, `v8/`, `node-v0.12.7-mips/`, and `mt7688sdk/` are the sources of v8, node, and mt7688 SDK, respectively.  
 
 Once this step is successfully done, the environment is ready for your later use. Every time you want to cross-compile a node native module, just come into the working directory `mt7688-cross/` and install a module with script `npm_install.sh`, there is no need to rebuild the environment again.  
 
@@ -51,11 +51,11 @@ Assume that you like to install the `serialport` module on your MT7688. First in
 
 `~/mt7688-cross$ ./npm_install.sh serialport`  
 
-You will get a compressed tarball in `node_modules_mips/`, in this example, it is `serialport-2.0.6_mips.tar.gz`. If you like to install other version of that module, just specify the version with `@`:  
+You will get a compressed tarball in `node_modules_mips/`, in this example, it is `serialport-2.0.6_mips.tar.gz`. If you like to install other version, just specify the version with `@`:  
 
 `~/mt7688-cross$ ./npm_install.sh serialport@2.0.4`  
 
-Next step is push it to MT7688 via `scp` and decompress it to any place to want. In this example, I will put it to `~/app` with the root account and extract it to `~/app/node_modules/`.  
+Next step is push it to MT7688 via `scp` and decompress it to any place you want. In this example, I will put it to `~/app` with the root account and extract it to `~/app/node_modules/`.  
 
 **At Host:**  
 
