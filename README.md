@@ -1,5 +1,5 @@
 # mt7688-cross
-The tool to create an environment for cross-compiling node.js native modules/add-ons running on MT7688 mips platform. Once the environment is created, just use `./npm_install.sh` to install the cross-compiled version of node modules, it's easy.  
+The tool to create an environment on a Host for cross-compiling node.js native modules/add-ons for MT7688 mips platform. Once the environment is created, just use `./npm_install.sh` to install the cross-compiled version of node modules, it's easy.  
 
 ## 1. Information about the Host and Target  
 
