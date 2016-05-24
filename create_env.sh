@@ -19,7 +19,7 @@ read -n1 -p "Are you sure to create the cross environment? [Y/n]" sure
 echo " "
 
 sure=${sure:-y}
-if [ "${sure}" != "y" ]; then
+if [ "${sure}" != "y" -a "${sure}" != "Y" ]; then
     exit 0
 fi
 
