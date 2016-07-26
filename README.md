@@ -1,11 +1,12 @@
 # mt7688-cross
 The tool to create an environment on a Host for cross-compiling node.js native modules/add-ons for MT7688 mips platform. Once the environment is created, just use `./npm_install.sh` to install the cross-compiled version of node modules, it's easy.  
 
-**IMPORTANT**
-[2016/07/26] Since google has removed the gyp repo from svn to git, you'll get a problem of `svn: E160013: Unable to connect to a repository at URL 'http://gyp.googlecode.com/svn/trunk'` when running `./create_env.sh`. I'll try to fix this asap.  
+**IMPORTANT [2016/07/26]**  
 
+Since google has removed the gyp repo from svn to git, you'll get a problem of `svn: E160013: Unable to connect to a repository at URL 'http://gyp.googlecode.com/svn/trunk'` when running `./create_env.sh`. I'll try to fix this asap.  
+  
 You may like to try the [docker image](https://labs.mediatek.com/forums/posts/list/4445.page) for the cross-build environemnt bulit by sonnyyu.  
-
+  
 
 ## 1. Information about the Host and Target  
 
