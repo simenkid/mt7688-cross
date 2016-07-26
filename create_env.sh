@@ -113,6 +113,7 @@ if [ ! -d v8 ]; then
     # checkout to v8 version: 3.28.71 (patch 19)
     git checkout -b 3.28.71.19 4dbc223b1e4d
     git branch
+    mv ../DEPS DEPS
     gclient sync
     cd ..
 fi
