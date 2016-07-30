@@ -1,7 +1,8 @@
 # mt7688-cross
 The tool to create an environment on a Host for cross-compiling node.js native modules/add-ons for MT7688 mips platform. Once the environment is created, just use `./npm_install.sh` to install the cross-compiled version of node modules, it's easy.  
 
-[Note] Please **do not** use mt7688-cross **v1.0 release**, since Google has removed the gyp from svn to git repo. You will get an error of `svn: E160013: Unable to connect to...` when running `./create_env.sh`. mt7688-cross v1.1 already fixes this dependencies broken issue.  
+[**Note**]
+* Please **do not** use mt7688-cross **v1.0 release**, since Google has removed the gyp from svn to git repo. You will get an error of `svn: E160013: Unable to connect to...` when running `./create_env.sh`. mt7688-cross v1.1 already fixes this dependencies broken issue.  
   
 
 ## 1. Information about the Host and Target  
@@ -18,7 +19,11 @@ The tool to create an environment on a Host for cross-compiling node.js native m
 </br>
 #### step 1: Install the following packages on your Host PC  
 
-` $ sudo apt-get install subversion build-essential gcc-multilib g++-multilib`  
+`$ sudo apt-get install subversion build-essential gcc-multilib g++-multilib`  
+
+mt7688-cross requires **wget** to download the mt7688 SDK and node.js source, make sure you have wget on your Ubuntu.  
+
+`$ sudo apt-get install wget`  
 
 </br>
 #### step 2: Make sure you are equipped with **node@0.12.7** and **npm@2.11.3** on your Host PC
